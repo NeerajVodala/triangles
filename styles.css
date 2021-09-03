@@ -144,3 +144,6 @@ img {
 .svg--color-change {
     filter: invert(9%) sepia(66%) saturate(1349%) hue-rotate(199deg) brightness(92%) contrast(93%);
 }
+ul {
+    padding-inline-start: 0px;
+}
