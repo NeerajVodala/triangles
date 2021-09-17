@@ -5,10 +5,14 @@ const result = document.querySelector(".result");
 checkButton.addEventListener("click", function checkAngles() {
     const sum = sumOfAngles(inputAngles[0].value, inputAngles[1].value, inputAngles[2].value);
     if (inputAngles[0].value && inputAngles[1].value && inputAngles[2].value) {
-        if (sum === 180) {
-            result.innerText = "Yay! The angles form a Triangle";
+        if (inputAngles[0].value > 0 && inputAngles[1].value > 0 && inputAngles[2].value > 0) {
+            if (sum === 180) {
+                result.innerText = "Yay! The angles form a Triangle";
+            } else {
+                result.innerText = "oops! The angles don't form a Triangle";
+            }
         } else {
-            result.innerText = "oops! The angles don't form a Triangle";
+            result.innerText = "Angles must be greater than 0";
         }
     } else {
         result.innerText = "Please enter all the angles";
